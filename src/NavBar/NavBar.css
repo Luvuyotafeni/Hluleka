@@ -1,0 +1,34 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #DFDFDF;
+    height: 10vh;
+  }
+  
+  .d_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .navList li {
+    margin-left: 40px; 
+    font-size: 20px;
+  }
+  
+  .navList a {
+    text-decoration: none;
+    color: #333;
+  }
+  
