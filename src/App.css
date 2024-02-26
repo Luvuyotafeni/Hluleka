@@ -15,3 +15,21 @@ a{
   text-decoration: none;
   color: black;
 }
+.container{
+  width: 95%;
+  margin: auto;
+}
+.row,
+.left,
+.right{
+  width: 50%;
+}
+.top{
+  margin-top:80px;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

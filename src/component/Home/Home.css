@@ -1,0 +1,53 @@
+/* Home.css */
+.home {
+    padding: 90px;
+    background-color: #CCCCCC;
+  }
+  .moto{
+
+    color: #774545
+  }
+  .name{
+    color: #4F2929;
+    margin-bottom: 60px;
+    margin-top: 100px;
+    font-size: 40px;
+  }
+  .welcome{
+    color: #CC7F7F;
+    font-size: 60px;
+    
+  }
+  .container {
+    max-width: 1200px; /* Set your desired max-width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .f_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left_top {
+    flex-basis: 50%; /* Take up 50% of the container width */
+    margin: 10px;
+    padding: 10px;
+    top: 0%;
+  }
+  
+  .right {
+    flex-basis: 50%; /* Take up 50% of the container width */
+  }
+  
+  .right_img {
+    margin-top: 40px; /* Adjust margin as needed */
+  }
+  
+  .imgH {
+    width: 100%; /* Make sure the image does not exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 2%;
+    
+  }
+  
