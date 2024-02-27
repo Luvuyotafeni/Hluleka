@@ -40,10 +40,11 @@ const Gallery = () => {
   return (
     <>
       <section id='gallery'>
-        <div className='Gallery'>
-            <p>Gallery</p>
-            <div>
-                <Slider {...settings}>
+          <p className='center_title'>Gallery</p> 
+            <div className='Gallery'>
+                      
+              <div className='gallery_container'>
+                <Slider {...settings} className='images'>
                 {images.map((image, index) => (
                     <div key={index}>
                     <img src={image} alt={`slide-${index + 1}`} />

@@ -1,6 +1,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    
   }
   
   header {
@@ -8,6 +9,8 @@
     height: 10vh;
     position: fixed;
     width: 100%;
+    z-index: 1;
+    top: 0;
   }
   
   .d_flex {

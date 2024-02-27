@@ -1,5 +1,6 @@
 #contact{
     height: 100vh;
+    margin: 10px;
 }
 .contact p{
     text-align: center;
@@ -9,7 +10,7 @@
 }
 .contact-container {
     text-align: center;
-    width: 100%;
+    width: 99%;
     display: flex;
     justify-content: center;
     align-items: center;
