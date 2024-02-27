@@ -1,0 +1,50 @@
+#contact{
+    height: 100vh;
+}
+.contact p{
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+    font-size: 30px ;
+}
+.contact-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DFDFDF;
+    margin: 10px;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  
+  input,
+  textarea {
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 40px;
+    width: 90%;
+  }
+  
+  button {
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+  

@@ -6,6 +6,8 @@
   header {
     background-color: #DFDFDF;
     height: 10vh;
+    position: fixed;
+    width: 100%;
   }
   
   .d_flex {

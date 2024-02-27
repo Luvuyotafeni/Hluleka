@@ -1,0 +1,20 @@
+.about_title{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 10%;
+}
+.center_text{
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: #DFDFDF;
+    
+}
+.center_text p{
+    text-align: center;
+    margin: 60px;
+    padding: 30px;
+    word-spacing: 52%;
+}
+
