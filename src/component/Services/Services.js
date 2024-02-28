@@ -4,6 +4,11 @@ import Img16 from './pictures/Img16.jpg'
 import Cruise from './pictures/sunset-cruise_fun_boat-ride-1024x576.jpg'
 import HlulekaNature from './pictures/LostFile_JPG_2137856.jpg'
 import Mpande from './pictures/Mpande-Beach-2.jpg'
+import Silaka from './pictures/Silaka-Nature-Res-1.jpg'
+import Zoo from '../assets/Img8.jpg'
+import Hiking from './pictures/download.jpg'
+import Quad from './pictures/Highstakes-Quad.jpg'
+import NestedModal from '../NestedModal';
 
 const Services = () => {
   const [activeSection, setActiveSection] = useState('accommodation');
@@ -39,18 +44,22 @@ const Services = () => {
                 <div className='service'>
                         <img src={Img16} className='Images center_title'></img>
                         <p className='center_title'> Dollitle Hotel</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
                         <img src={HlulekaNature} className='Images center_title'></img>
                         <p className='center_title'> Hluleka Nature reserve bnb</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
-                        <img src={Img16} className='Images center_title'></img>
-                        <p className='center_title'> Nolizwi's Homestay</p>
+                        <img src={Silaka} className='Images center_title'></img>
+                        <p className='center_title'> Silaka Nature Reserve and Chalets</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
                         <img src={Mpande} className='Images center_title'></img>
                         <p className='center_title'> Rogers mpande beach Cottage</p>
+                        <NestedModal/>
                     </div>
                 </div>
               </div>
@@ -60,20 +69,24 @@ const Services = () => {
                 <p className='center_title'>This is the Activities section.</p>
                 <div className='services_container'>
                     <div className='service'>
-                        <img src={Cruise} className='Images center_title'></img>
+                        <img src={Cruise} className='Images center_title'></img>                       
                         <p className='center_title'> Boat Cruise</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
-                        <img src={Img16} className='Images center_title'></img>
-                        <p className='center_title'> Dollitle Hotel</p>
+                        <img src={Zoo} className='Images center_title'></img>
+                        <p className='center_title'> Zoo</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
-                        <img src={Img16} className='Images center_title'></img>
-                        <p className='center_title'> Dollitle Hotel</p>
+                        <img src={Hiking} className='Images center_title'></img>
+                        <p className='center_title'> Hiking</p>
+                        <NestedModal/>
                     </div>
                     <div className='service'>
-                        <img src={Img16} className='Images center_title'></img>
-                        <p className='center_title'> Dollitle Hotel</p>
+                        <img src={Quad} className='Images center_title'></img>
+                        <p className='center_title'>Quad Biking</p>
+                        <NestedModal/>
                     </div>
 
                 </div>

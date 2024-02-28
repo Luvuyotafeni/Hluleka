@@ -24,7 +24,9 @@
     height: 350px;
 }
 .service{
-
+    border-color: black;
+    margin:5px;
+    width: 450px;
 }
 .services_container{
     display: flex;
