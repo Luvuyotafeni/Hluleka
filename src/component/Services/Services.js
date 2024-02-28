@@ -44,22 +44,37 @@ const Services = () => {
                 <div className='service'>
                         <img src={Img16} className='Images center_title'></img>
                         <p className='center_title'> Dollitle Hotel</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Dollitle Hotel"
+                          description="Dolittle Cottage is self-catering and can accommodate 16 people. This is your chance to enjoy the WILD in comfort.
+                          The cottage has 6 bedrooms, 4 inside bathrooms, 1 outside beach shower."
+                        />
                     </div>
                     <div className='service'>
                         <img src={HlulekaNature} className='Images center_title'></img>
                         <p className='center_title'> Hluleka Nature reserve bnb</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Hluleka"
+                          description="seven self catering chalets with exquisite views, on a small hilltop  covered in old indigenous trees, striking orange 
+                          strelitzias and grassy areas where Burchell’s zebra roam and graze.Each double story chalet sleeps 4. "
+                        />
                     </div>
                     <div className='service'>
                         <img src={Silaka} className='Images center_title'></img>
                         <p className='center_title'> Silaka Nature Reserve and Chalets</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Silaka Nature Reserve and Chalets"
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                     </div>
                     <div className='service'>
                         <img src={Mpande} className='Images center_title'></img>
                         <p className='center_title'> Rogers mpande beach Cottage</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Rogers mpande beach Cottage"
+                          description="Rogers Mpande Cottage is perfectly situated for self catering with stunning views and direct access to the beach. 
+                          Sit on the wooden deck to enjoy both sunrises and sunsets and whales as they migrate seasonally to their breeding grounds. "
+                        />
                     </div>
                 </div>
               </div>
@@ -71,22 +86,34 @@ const Services = () => {
                     <div className='service'>
                         <img src={Cruise} className='Images center_title'></img>                       
                         <p className='center_title'> Boat Cruise</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Boat Cruise"
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                     </div>
                     <div className='service'>
                         <img src={Zoo} className='Images center_title'></img>
-                        <p className='center_title'> Zoo</p>
-                        <NestedModal/>
+                        <p className='center_title'>Zoo</p>
+                        <NestedModal
+                          title="Zoo"
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                     </div>
                     <div className='service'>
                         <img src={Hiking} className='Images center_title'></img>
-                        <p className='center_title'> Hiking</p>
-                        <NestedModal/>
+                        <p className='center_title'>Hiking</p>
+                        <NestedModal
+                          title="Hiking"
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                     </div>
                     <div className='service'>
                         <img src={Quad} className='Images center_title'></img>
                         <p className='center_title'>Quad Biking</p>
-                        <NestedModal/>
+                        <NestedModal
+                          title="Quad Biking"
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                     </div>
 
                 </div>

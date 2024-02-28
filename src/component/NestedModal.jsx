@@ -5,7 +5,7 @@ import { styled, css } from '@mui/system';
 import { Modal as BaseModal } from '@mui/base/Modal';
 import { Button } from '@mui/base/Button';
 
-export default function NestedModal() {
+export default function NestedModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -13,10 +13,10 @@ export default function NestedModal() {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const { title, description } = props;
   return (
     <div>
-      <TriggerButton onClick={handleOpen}>Open modal</TriggerButton>
+      <TriggerButton onClick={handleOpen}>More</TriggerButton>
       <Modal
         open={open}
         onClose={handleClose}
@@ -26,10 +26,10 @@ export default function NestedModal() {
       >
         <ModalContent sx={style}>
           <h2 id="parent-modal-title" className="modal-title">
-            Text in a modal
+            {props.title}
           </h2>
           <p id="parent-modal-description" className="modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {props.description}
           </p>
           <ChildModal />
         </ModalContent>
