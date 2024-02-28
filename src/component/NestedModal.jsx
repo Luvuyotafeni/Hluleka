@@ -50,23 +50,6 @@ function ChildModal() {
   return (
     <React.Fragment>
       <ModalButton onClick={handleOpen}>Add to cart</ModalButton>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="child-modal-title"
-        aria-describedby="child-modal-description"
-        slots={{ backdrop: StyledBackdrop }}
-      >
-        <ModalContent sx={[style, { width: '240px' }]}>
-          <h2 id="child-modal-title" className="modal-title">
-            Text in a child modal
-          </h2>
-          <p id="child-modal-description" className="modal-description">
-            Successfully added to cart.
-          </p>
-          <ModalButton onClick={handleClose}>Close Child Modal</ModalButton>
-        </ModalContent>
-      </Modal>
     </React.Fragment>
   );
 }
