@@ -64,7 +64,7 @@ const Services = () => {
                         <p className='center_title'> Silaka Nature Reserve and Chalets</p>
                         <NestedModal
                           title="Silaka Nature Reserve and Chalets"
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          description="A small but beautiful coastal reserve, with 14 chalets can accommodate 4 persons each; 2 chalets accommodate 2 persons each and 2 chalets accommodate 6 persons each."
                         />
                     </div>
                     <div className='service'>
@@ -88,7 +88,9 @@ const Services = () => {
                         <p className='center_title'> Boat Cruise</p>
                         <NestedModal
                           title="Boat Cruise"
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          description="
+                          Embarking on a boat cruise is a sensory journey, as the gentle rock of the vessel merges with the soothing whispers of water, 
+                          providing a serene escape to admire picturesque landscapes"
                         />
                     </div>
                     <div className='service'>
@@ -96,7 +98,9 @@ const Services = () => {
                         <p className='center_title'>Zoo</p>
                         <NestedModal
                           title="Zoo"
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          description="
+                          Exploring the zoo is a vibrant immersion into a world of diverse wildlife, where the rustle of leaves, the calls of exotic creatures, 
+                          and the vibrant colors of feathers and fur create an enchanting tapestry of nature's wonders"
                         />
                     </div>
                     <div className='service'>
@@ -104,7 +108,8 @@ const Services = () => {
                         <p className='center_title'>Hiking</p>
                         <NestedModal
                           title="Hiking"
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          description="Hiking unfolds as a rhythmic ascent through nature's wonders, where the crisp rustle of leaves underfoot and
+                          the invigorating scent of pine accompany the rewarding discovery of scenic vistas along winding trails."
                         />
                     </div>
                     <div className='service'>
@@ -112,7 +117,8 @@ const Services = () => {
                         <p className='center_title'>Quad Biking</p>
                         <NestedModal
                           title="Quad Biking"
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          description="Quad biking ignites an adrenaline-fueled adventure as the powerful engine roars, kicking up clouds of dust on 
+                          rugged trails,while the thrill of maneuvering through diverse terrains creates an exhilarating experience in the great outdoors"
                         />
                     </div>
 

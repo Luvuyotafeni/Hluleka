@@ -49,7 +49,7 @@ function ChildModal() {
 
   return (
     <React.Fragment>
-      <ModalButton onClick={handleOpen}>Open Child Modal</ModalButton>
+      <ModalButton onClick={handleOpen}>Add to cart</ModalButton>
       <Modal
         open={open}
         onClose={handleClose}
@@ -62,7 +62,7 @@ function ChildModal() {
             Text in a child modal
           </h2>
           <p id="child-modal-description" className="modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Successfully added to cart.
           </p>
           <ModalButton onClick={handleClose}>Close Child Modal</ModalButton>
         </ModalContent>
@@ -183,6 +183,8 @@ const TriggerButton = styled(Button)(
   border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
   color: ${theme.palette.mode === 'dark' ? grey[200] : grey[900]};
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  margin-left: 150px; /* Adjust the margin-right value as needed */
+
 
   &:hover {
     background: ${theme.palette.mode === 'dark' ? grey[800] : grey[50]};
@@ -199,6 +201,7 @@ const TriggerButton = styled(Button)(
   }
 `,
 );
+
 
 const ModalButton = styled(Button)(
   ({ theme }) => `
