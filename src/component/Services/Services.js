@@ -48,6 +48,7 @@ const Services = () => {
                           title="Dollitle Hotel"
                           description="Dolittle Cottage is self-catering and can accommodate 16 people. This is your chance to enjoy the WILD in comfort.
                           The cottage has 6 bedrooms, 4 inside bathrooms, 1 outside beach shower."
+                          price="R200 per night"
                         />
                     </div>
                     <div className='service'>
@@ -57,6 +58,7 @@ const Services = () => {
                           title="Hluleka"
                           description="seven self catering chalets with exquisite views, on a small hilltop  covered in old indigenous trees, striking orange 
                           strelitzias and grassy areas where Burchell’s zebra roam and graze.Each double story chalet sleeps 4. "
+                          price="R200 per night"  
                         />
                     </div>
                     <div className='service'>
@@ -65,6 +67,7 @@ const Services = () => {
                         <NestedModal
                           title="Silaka Nature Reserve and Chalets"
                           description="A small but beautiful coastal reserve, with 14 chalets can accommodate 4 persons each; 2 chalets accommodate 2 persons each and 2 chalets accommodate 6 persons each."
+                          price="R200 per night"
                         />
                     </div>
                     <div className='service'>
@@ -74,6 +77,7 @@ const Services = () => {
                           title="Rogers mpande beach Cottage"
                           description="Rogers Mpande Cottage is perfectly situated for self catering with stunning views and direct access to the beach. 
                           Sit on the wooden deck to enjoy both sunrises and sunsets and whales as they migrate seasonally to their breeding grounds. "
+                          price="R200 per night" 
                         />
                     </div>
                 </div>
@@ -91,6 +95,7 @@ const Services = () => {
                           description="
                           Embarking on a boat cruise is a sensory journey, as the gentle rock of the vessel merges with the soothing whispers of water, 
                           providing a serene escape to admire picturesque landscapes"
+                          price="R200 per night" 
                         />
                     </div>
                     <div className='service'>
@@ -101,6 +106,7 @@ const Services = () => {
                           description="
                           Exploring the zoo is a vibrant immersion into a world of diverse wildlife, where the rustle of leaves, the calls of exotic creatures, 
                           and the vibrant colors of feathers and fur create an enchanting tapestry of nature's wonders"
+                          price="R200 per night" 
                         />
                     </div>
                     <div className='service'>
@@ -110,6 +116,7 @@ const Services = () => {
                           title="Hiking"
                           description="Hiking unfolds as a rhythmic ascent through nature's wonders, where the crisp rustle of leaves underfoot and
                           the invigorating scent of pine accompany the rewarding discovery of scenic vistas along winding trails."
+                          price="R200 per night"
                         />
                     </div>
                     <div className='service'>
@@ -119,6 +126,7 @@ const Services = () => {
                           title="Quad Biking"
                           description="Quad biking ignites an adrenaline-fueled adventure as the powerful engine roars, kicking up clouds of dust on 
                           rugged trails,while the thrill of maneuvering through diverse terrains creates an exhilarating experience in the great outdoors"
+                          price="R200 per night" 
                         />
                     </div>
 

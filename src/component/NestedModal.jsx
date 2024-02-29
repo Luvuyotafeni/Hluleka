@@ -7,13 +7,43 @@ import { Button } from '@mui/base/Button';
 
 export default function NestedModal(props) {
   const [open, setOpen] = React.useState(false);
+  const [quantity, setQuantity] = React.useState(1);
   const handleOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
-  const { title, description } = props;
+
+  const { title, description, price } = props;
+ 
+  
+ 
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value, 10);
+    setQuantity(isNaN(newQuantity) ? 1 : newQuantity);
+  };
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      title,
+      quantity,
+      price,
+    };
+
+    // Get existing cart from local storage or create an empty array
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add the new item to the cart
+    const updatedCart = [...existingCart, cartItem];
+
+    // Save the updated cart to local storage
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+
+    // Close the modal after adding to cart
+    handleClose();
+  };
+
   return (
     <div>
       <TriggerButton onClick={handleOpen}>More</TriggerButton>
@@ -31,7 +61,23 @@ export default function NestedModal(props) {
           <p id="parent-modal-description" className="modal-description">
             {props.description}
           </p>
-          <ChildModal />
+          {price && (
+            <>
+              <p id="parent-modal-price" className="modal-price">
+                Price: {price}
+              </p>
+              <label htmlFor="quantity">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value={quantity}
+                onChange={handleQuantityChange}
+                min="1"
+              />
+              <ModalButton onClick={handleAddToCart}>Add to Cart</ModalButton>
+            </>
+          )}      
         </ModalContent>
       </Modal>
     </div>
