@@ -1,9 +1,13 @@
 import React from 'react';
 
 function Cart() {
+  // Get the cart items from local storage or initialize an empty array
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
   return (
     <>
       <section>
+        <p>CART</p>
         <table>
           <thead>
             <tr>
@@ -13,17 +17,13 @@ function Cart() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Product 1</td>
-              <td>2</td>
-              <td>$20.00</td>
-            </tr>
-            <tr>
-              <td>Product 2</td>
-              <td>1</td>
-              <td>$15.00</td>
-            </tr>
-            {/* Add more rows as needed */}
+            {cartItems.map((item, index) => (
+              <tr key={index}>
+                <td>{item.title}</td>
+                <td>{item.quantity}</td>
+                <td>{item.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </section>

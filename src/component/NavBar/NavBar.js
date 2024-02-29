@@ -20,7 +20,7 @@ const NavBar = () => {
             <li><a href='#gallery'>Gallery</a></li>
             <li><a href='#services'>Services</a></li>
             <li><a href="#" onClick={handleCartClick} className='bx bxs-cart'></a></li>
-            <li><a href='#contact'>Contact me</a></li>
+            <li><a href='#contact'>Contact Us</a></li>
           </ul>
         </div>
       </header>
