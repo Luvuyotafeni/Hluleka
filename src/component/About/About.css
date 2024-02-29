@@ -1,20 +1,57 @@
-.about_title{
+/* Default styles */
+.about_title {
     text-align: center;
     padding: 20px;
     font-size: 30px;
     font-weight: 10%;
 }
-.center_text{
+
+.center_text {
     padding: 20px;
     margin: 10px;
     font-size: 20px;
     background-color: #DFDFDF;
-    
 }
-.center_text p{
+
+.center_text p {
     text-align: center;
     margin: 60px;
     padding: 30px;
     word-spacing: 52%;
 }
 
+/* Media query for screens with a maximum width of 768 pixels */
+@media only screen and (max-width: 768px) {
+    .about_title {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .center_text {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .center_text p {
+        margin: 30px; /* Adjust margin for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+        word-spacing: 20%; /* Adjust word spacing for smaller screens */
+    }
+}
+
+/* Media query for screens with a maximum width of 480 pixels */
+@media only screen and (max-width: 480px) {
+    .about_title {
+        font-size: 20px; /* Adjust font size for even smaller screens */
+    }
+
+    .center_text {
+        font-size: 16px; /* Adjust font size for even smaller screens */
+    }
+
+    .center_text p {
+        margin: 20px; /* Adjust margin for even smaller screens */
+        padding: 15px; /* Adjust padding for even smaller screens */
+        word-spacing: 15%; /* Adjust word spacing for even smaller screens */
+    }
+}
+
+/* Add more media queries as needed for different screen sizes */

@@ -25,10 +25,8 @@ const Gallery = () => {
     Img7,
     Img8,
     Img9,
-
     // Add more image URLs as needed
   ];
-
   const settings = {
     dots: true,
     infinite: true,
@@ -38,23 +36,20 @@ const Gallery = () => {
   };
 
   return (
-    <>
-      <section id='gallery'>
-          <p className='center_title'>Gallery</p> 
-            <div className='Gallery'>
-                      
-              <div className='gallery_container'>
-                <Slider {...settings} className='images'>
-                {images.map((image, index) => (
-                    <div key={index}>
-                    <img src={image} alt={`slide-${index + 1}`} />
-                    </div>
-                ))}
-        </Slider>
-            </div>
+    <section id='gallery'>
+      <p className='center_title'>Gallery</p> 
+      <div className='Gallery'>
+        <div className='gallery_container'>
+          <Slider {...settings} className='images'>
+            {images.map((image, index) => (
+              <div key={index} className="gallery-slide">
+                <img src={image} alt={`slide-${index + 1}`} />
+              </div>
+            ))}
+          </Slider>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

@@ -1,43 +1,54 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    
-  }
-  
-  header {
-    background-color: #DFDFDF;
-    height: 10vh;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-  }
-  
-  .d_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navList {
-    list-style: none;
-    display: flex;
-    margin-top: 15px;
-    align-items: center;
-    margin-left: auto;
-  }
-  
-  .navList li {
-    margin-left: 40px; 
-    font-size: 20px;
-  }
-  
-  .navList a {
-    text-decoration: none;
-    color: #333;
-  }
-  /* NavBar.css */
+/* NavBar.css */
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #DFDFDF;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.menu-toggle i {
+  color: #333;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navList li {
+  margin-left: 40px; 
+  font-size: 20px;
+}
+
+.navList a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Added styles for overlay and form */
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -48,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Ensure it overlays other content */
+  z-index: 999; 
 }
 
 .cart-popup {
@@ -58,4 +69,67 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Add any additional styles as needed */
+.check_btn {
+  margin: 10px 60px 10px 100px;
+}
+
+/* Checkout Form */
+.cart-overlay form {
+  width: 500px; 
+  margin: 20px;
+}
+
+.cart-overlay form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: small;
+}
+
+.cart-overlay form input {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.cart-overlay form button {
+  padding: 10px;
+  border: none;
+  margin-left: 200px;
+}
+
+/* Responsive styles - hide menu by default and show when open */
+@media screen and (max-width: 768px) {
+  .navList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #DFDFDF;
+    z-index: 1;
+  }
+
+  .navList.menu-open {
+    display: flex;
+  }
+
+  .navList li {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .navList a {
+    color: #333;
+  }
+
+  header.menu-open {
+    height: auto;
+  }
+
+  header{
+    width: 100%;
+  }
+}

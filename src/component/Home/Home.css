@@ -1,54 +1,82 @@
 /* Home.css */
-.home {
-    padding: 90px;
-    background-color: #CCCCCC;
-    margin: 100px 10px 10px 10px;
-  }
-  .moto{
 
-    color: #774545
+.home {
+  padding: 90px;
+  background-color: #CCCCCC;
+  margin: 100px 10px 10px 10px;
+}
+
+.moto {
+  color: #774545;
+}
+
+.name {
+  color: #4F2929;
+  margin-bottom: 60px;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.welcome {
+  color: #CC7F7F;
+  font-size: 60px;
+}
+
+.container {
+  max-width: 1200px; /* Set your desired max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+.f_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left_top {
+  flex-basis: 50%; /* Take up 50% of the container width */
+  margin: 10px;
+  padding: 10px;
+  top: 0%;
+}
+
+.right {
+  flex-basis: 50%; /* Take up 50% of the container width */
+}
+
+.right_img {
+  margin-top: 40px; /* Adjust margin as needed */
+}
+
+.imgH {
+  width: 100%; /* Make sure the image does not exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 2%;
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media only screen and (max-width: 768px) {
+  .home {
+      padding: 40px; /* Adjust padding for smaller screens */
+      margin: 50px 5px 5px 5px; /* Adjust margin for smaller screens */
   }
-  .name{
-    color: #4F2929;
-    margin-bottom: 60px;
-    margin-top: 100px;
-    font-size: 40px;
+
+  .name {
+      font-size: 30px; /* Adjust font size for smaller screens */
+      margin-top: 60px; /* Adjust margin for smaller screens */
+      margin-bottom: 40px; /* Adjust margin for smaller screens */
   }
-  .welcome{
-    color: #CC7F7F;
-    font-size: 60px;
-    
+
+  .welcome {
+      font-size: 40px; /* Adjust font size for smaller screens */
   }
-  .container {
-    max-width: 1200px; /* Set your desired max-width */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  .f_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .left_top {
-    flex-basis: 50%; /* Take up 50% of the container width */
-    margin: 10px;
-    padding: 10px;
-    top: 0%;
-  }
-  
+
+  .left_top,
   .right {
-    flex-basis: 50%; /* Take up 50% of the container width */
+      flex-basis: 100%; /* Take up 100% of the container width for smaller screens */
   }
-  
+
   .right_img {
-    margin-top: 40px; /* Adjust margin as needed */
+      margin-top: 20px; /* Adjust margin for smaller screens */
   }
-  
-  .imgH {
-    width: 100%; /* Make sure the image does not exceed its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 2%;
-    
-  }
-  
+}
