@@ -81,3 +81,29 @@
       margin-top: 20px; /* Adjust margin for smaller screens */
   }
 }
+@media only screen and (max-width: 425px){
+  .home {
+    padding: 40px; /* Adjust padding for smaller screens */
+    margin: 50px 5px 5px 5px; /* Adjust margin for smaller screens */
+    font-size: smaller;
+}
+
+.name {
+    font-size: 10px; /* Adjust font size for smaller screens */
+    margin-top: 60px; /* Adjust margin for smaller screens */
+    margin-bottom: 40px; /* Adjust margin for smaller screens */
+}
+
+.welcome {
+    font-size: 30px; /* Adjust font size for smaller screens */
+}
+
+.left_top,
+.right {
+    flex-basis: 100%; /* Take up 100% of the container width for smaller screens */
+}
+
+.right_img {
+    margin-top: 20px; /* Adjust margin for smaller screens */
+}
+}

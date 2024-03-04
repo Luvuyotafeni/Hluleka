@@ -1,7 +1,7 @@
 /* NavBar.css */
 
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -102,6 +102,31 @@ header {
 
 /* Responsive styles - hide menu by default and show when open */
 @media screen and (max-width: 768px) {
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; 
+  }
+  .cart-popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .check_btn {
+    margin: 5px 50px 5px 10px;
+  }
+  .container{
+    width: 100%;
+    margin: 0;
+  }
   .menu-toggle {
     display: block;
     width: 100%;
@@ -141,9 +166,9 @@ header {
     margin-bottom: 15px;
   }
   .cart-overlay form button {
-    padding: 2px;
+    padding: 0;
     border: none;
-    margin-left: 50px;
+    margin-left: 0;
   }
   .cart-overlay form label {
     display: block;
@@ -152,6 +177,75 @@ header {
   }
   .cart-overlay form {
     width: 200px; 
+    margin: 0;
+  }
+  .navList a {
+    color: #333;
+  }
+
+  header.menu-open {
+    height: auto;
+  }
+
+  header{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px){
+  .container{
+    width: 100%;
+    margin: 0;
+  }
+  .menu-toggle {
+    display: block;
+    width: 100%;
+  }
+  header {
+    background-color: #DFDFDF;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  }
+  .navList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 80%;
+    background-color: #DFDFDF;
+    z-index: 1;
+  }
+
+  .navList.menu-open {
+    display: flex;
+  }
+
+  .navList li {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .cart-overlay form input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+  .cart-overlay form button {
+    padding: 20px;
+    border: none;
+    margin-left: 0;
+  }
+  .cart-overlay form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: smaller;
+  }
+  .cart-overlay form {
+    width: 150px; 
     margin: 0;
   }
   .navList a {

@@ -145,8 +145,15 @@ const Modal = styled(BaseModal)`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
 
+  /* Adjusted styles for nested modal size */
+  &.base-Modal-open {
+    .nested-modal {
+      width: 300px;  // Adjust the width as needed
+      max-width: 90%;  // Adjust the maximum width as needed
+    }
+  }
+`;
 const StyledBackdrop = styled(Backdrop)`
   z-index: -1;
   position: fixed;
@@ -160,7 +167,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 400,  // Default width for larger screens
+  '@media (max-width: 768px)': {
+    width: '70%',  // Adjusted width for screens up to 768px
+  },
+  '@media (max-width: 425px)': {
+    width: '80%',  // Further adjusted width for screens up to 425px
+  },
 };
 
 const ModalContent = styled('div')(
@@ -193,6 +206,13 @@ const ModalContent = styled('div')(
       font-weight: 400;
       color: ${theme.palette.mode === 'dark' ? grey[400] : grey[800]};
       margin-bottom: 4px;
+    }
+
+    /* Styles for nested modal */
+    & .nested-modal {
+      width: 100%;  // Full width by default
+      max-width: 100%;  // Full width by default
+      transition: all 150ms ease;
     }
   `,
 );
