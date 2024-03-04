@@ -37,3 +37,12 @@
     height: auto;
     width: auto;
 }
+@media screen and (max-width: 768px) {
+    .buttons {
+      margin-left: 0; /* Adjust margins for smaller screens */
+    }
+  
+    .service {
+      width: 100%; /* Make services take full width on smaller screens */
+    }
+  }

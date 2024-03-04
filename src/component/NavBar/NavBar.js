@@ -60,7 +60,7 @@ const NavBar = () => {
   return (
     <div>
 
-<header className={`Header ${isMenuOpen ? 'menu-open' : ''}`}>
+      <header className={`Header ${isMenuOpen ? 'menu-open' : ''}`}>
         <div className='container d_flex'>
           <div className="menu-toggle" onClick={handleToggleMenu}>
             <i className={`bx ${isMenuOpen ? 'bx bx-x' : 'bx bx-menu'}`}></i>

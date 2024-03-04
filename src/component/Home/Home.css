@@ -59,16 +59,17 @@
   .home {
       padding: 40px; /* Adjust padding for smaller screens */
       margin: 50px 5px 5px 5px; /* Adjust margin for smaller screens */
+      font-size: smaller;
   }
 
   .name {
-      font-size: 30px; /* Adjust font size for smaller screens */
+      font-size: 20px; /* Adjust font size for smaller screens */
       margin-top: 60px; /* Adjust margin for smaller screens */
       margin-bottom: 40px; /* Adjust margin for smaller screens */
   }
 
   .welcome {
-      font-size: 40px; /* Adjust font size for smaller screens */
+      font-size: 30px; /* Adjust font size for smaller screens */
   }
 
   .left_top,

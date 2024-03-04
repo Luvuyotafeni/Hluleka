@@ -11,7 +11,19 @@ import Img5 from '../assets/Img5.jpg'
 import Img6 from '../assets/Img6.jpg'
 import Img7 from '../assets/Img7.jpg'
 import Img8 from '../assets/Img8.jpg'
-import Img9 from '../assets/Img9.jpg'
+import Img10 from '../assets/Hluleka-Nature-Reserve-copyright-Scott-N-Ramsay-www.yearinthewild.com-4-2.jpg'
+import Img11 from '../assets/Hluleka-Transkei.jpg'
+import Img12 from '../assets/hluleka-nature-reserve-view.jpg'
+import Img13 from '../assets/hluleka-nature-reserve.jpg'
+import Img14 from '../assets/Img14.jpg'
+import Img15 from '../assets/IMG_1580.jpg'
+import Img16 from '../assets/IMG_1584.jpg'
+import Img17 from '../assets/IMG_1585.jpg'
+import Img18 from '../assets/IMG_1587.jpg'
+import Img21 from '../assets/IMG_1589.jpg'
+import Img22 from '../assets/IMG_0266.jpg'
+import Img23 from '../assets/Img13.jpg'
+
 
 
 const Gallery = () => {
@@ -24,7 +36,19 @@ const Gallery = () => {
     Img6,
     Img7,
     Img8,
-    Img9,
+    Img10,
+    Img11,
+    Img12,
+    Img13,
+    Img14,
+    Img15,
+    Img16,
+    Img17,
+    Img18,
+    Img21,
+    Img22,
+    Img23
+
     // Add more image URLs as needed
   ];
   const settings = {
@@ -43,7 +67,7 @@ const Gallery = () => {
           <Slider {...settings} className='images'>
             {images.map((image, index) => (
               <div key={index} className="gallery-slide">
-                <img src={image} alt={`slide-${index + 1}`} />
+                <img src={image} alt={`slide-${index + 1}`} className='' />
               </div>
             ))}
           </Slider>

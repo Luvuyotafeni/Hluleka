@@ -96,16 +96,31 @@ header {
   border: none;
   margin-left: 200px;
 }
+.menu-toggle{
+  display: none;
+}
 
 /* Responsive styles - hide menu by default and show when open */
 @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    width: 100%;
+  }
+  header {
+    background-color: #DFDFDF;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  }
   .navList {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 10vh;
     left: 0;
-    width: 100%;
+    width: 80%;
     background-color: #DFDFDF;
     z-index: 1;
   }
@@ -120,7 +135,25 @@ header {
     text-align: center;
     border-bottom: 1px solid #ccc;
   }
-
+  .cart-overlay form input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+  .cart-overlay form button {
+    padding: 2px;
+    border: none;
+    margin-left: 50px;
+  }
+  .cart-overlay form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: small;
+  }
+  .cart-overlay form {
+    width: 200px; 
+    margin: 0;
+  }
   .navList a {
     color: #333;
   }

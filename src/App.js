@@ -1,7 +1,3 @@
-
-
-
-
 import './App.css';
 import NavBar from './component/NavBar/NavBar';
 import Home from './component/Home/Home'
@@ -21,9 +17,6 @@ function App() {
       <Gallery />
       <Services />
       <Contact />
-      <Routes>
-        <Route path="./component/Cart"  exact element={<Cart/>} />
-      </Routes>
     </>
   );
 }
