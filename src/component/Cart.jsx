@@ -7,25 +7,29 @@ function Cart() {
   return (
     <>
       <section>
-        <p>CART</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cartItems.map((item, index) => (
-              <tr key={index}>
-                <td>{item.title}</td>
-                <td>{item.quantity}</td>
-                <td>{item.price}</td>
+        <h2>Your Cart</h2>
+        {cartItems.length === 0 ? (
+          <p>Your cart is empty</p>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cartItems.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.title}</td>
+                  <td>{item.quantity}</td>
+                  <td>{item.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </section>
     </>
   );
