@@ -13,7 +13,9 @@ const cartSchema = new mongoose.Schema({
     gender: String,
     id: String,
     date: String,
+    overallTotal: String,
     cartItems: [cartItemSchema],
+    
 });
 
 module.exports = mongoose.model("Cart", cartSchema);
