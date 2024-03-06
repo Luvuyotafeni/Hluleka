@@ -73,7 +73,7 @@ const NavBar = () => {
     // Use checkoutFormData to perform actions like sending data to the server or storing in localStorage
     const formDataWithCart = {
       ...checkoutFormData,
-      cart: cartItems, // Add the cart items to the form data
+      cartItems, // Add the cart items to the form data
     };
 
     console.log("Checkout Form Data:", formDataWithCart);

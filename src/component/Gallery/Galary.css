@@ -20,8 +20,8 @@
 }
 
 .gallery-slide img {
-  width: 70%; /* Ensure images take the full width of the slider */
-  height: 40%; /* Maintain aspect ratio */
+  width: 80%; /* Ensure images take the full width of the slider */
+  height: 60%; /* Maintain aspect ratio */
   margin-left: 100px;
   align-items:center ;
   align-content: center;
@@ -36,7 +36,7 @@
 .slick-slider {
   margin: 0 auto; /* Center the slider horizontally */
   max-width: 500px; /* Set a maximum width for the slider */
-  height: 300px; /* Set the desired height for the slider */
+  height: 400px; /* Set the desired height for the slider */
 }
 .slide{
 
