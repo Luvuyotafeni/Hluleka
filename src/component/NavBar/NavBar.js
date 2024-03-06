@@ -70,11 +70,19 @@ const NavBar = () => {
     // Get the cart items from localStorage
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Calculate the overall total
+    const overallTotal = cartItems.reduce((total, item) => {
+      const numericPrice = parseFloat(item.price.substring(1));
+      const itemTotal = !isNaN(numericPrice) ? item.quantity * numericPrice : 0;
+      return total + itemTotal;
+    }, 0);
     // Use checkoutFormData to perform actions like sending data to the server or storing in localStorage
     const formDataWithCart = {
       ...checkoutFormData,
       cartItems, // Add the cart items to the form data
+      overallTotal, // Add the overall total to the form data
     };
+
 
     console.log("Checkout Form Data:", formDataWithCart);
 
