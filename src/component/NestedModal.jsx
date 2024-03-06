@@ -222,25 +222,30 @@ const TriggerButton = styled(Button)(
     /* Your existing styles for TriggerButton */
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 15px;
     line-height: 1.5;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
     transition: all 150ms ease;
     cursor: pointer;
-    background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
-    border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
-    color: ${theme.palette.mode === 'dark' ? grey[200] : grey[900]};
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    background:#007bff;
+    border: 0;
+    color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   
     &:hover {
-      background: ${theme.palette.mode === 'dark' ? grey[800] : grey[50]};
-      border-color: ${theme.palette.mode === 'dark' ? grey[600] : grey[300]};
+      background-color: hsl(261deg 80% 48%); 
+      color:white
+      box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
     }
   
     &:active {
-      background: ${theme.palette.mode === 'dark' ? grey[700] : grey[100]};
+      letter-spacing: 3px;
+      background-color: hsl(261deg 80% 48%);
+      color: ${theme.palette.mode === 'dark' ? grey[50] : grey[900]};
+      box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+      transform: translateY(10px);
+      transition: 100ms;
     }
   
     &:focus-visible {

@@ -15,10 +15,24 @@
     margin-left: 300px;
     margin-top: 50px;
     padding: 20px;
+    border-radius: 50px;
     width: 200px;
-    border-radius: 0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
 }
-
+.buttons:hover{
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+.buttons:active{
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
 .Images{
     width: 400px;
     height: 350px;
@@ -44,5 +58,16 @@
   
     .service {
       width: 100%; /* Make services take full width on smaller screens */
+    }
+  }
+  @media only screen and (max-width: 425px){
+    .service {
+        width: 100%; /* Make services take full width on smaller screens */
+      }
+    .accommodation-content{
+        max-width: 100px;
+    }
+    .Images{
+        max-width: 300px;
     }
   }

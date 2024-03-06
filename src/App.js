@@ -5,8 +5,6 @@ import About from './component/About/About'
 import Gallery from './component/Gallery/Galary'
 import Services from './component/Services/Services';
 import Contact from './component/Contact/Contact';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Cart from './component/Cart';
 
 function App() {
   return (

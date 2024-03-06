@@ -144,8 +144,9 @@ header {
     flex-direction: column;
     position: absolute;
     top: 10vh;
+    margin-top: 0 ;
     left: 0;
-    width: 80%;
+    width: 100%;
     background-color: #DFDFDF;
     z-index: 1;
   }
@@ -156,7 +157,7 @@ header {
 
   .navList li {
     margin: 0;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border-bottom: 1px solid #ccc;
   }
@@ -204,17 +205,17 @@ header {
     background-color: #DFDFDF;
     height: 10vh;
     position: fixed;
-    width: 100%;
+    width:max-content;
     z-index: 1;
     top: 0;
   }
   .navList {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position:fixed;
     top: 10vh;
     left: 0;
-    width: 80%;
+    width: 100%;
     background-color: #DFDFDF;
     z-index: 1;
   }
