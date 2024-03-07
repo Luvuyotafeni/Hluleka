@@ -21,6 +21,7 @@ function Cart() {
     updatedCart.splice(index, 1);
     setCartItems(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+    window.location.reload();
   };
 
   return (
@@ -28,7 +29,7 @@ function Cart() {
       <section>
         <h2 className='center_title'><i className='bx bxs-cart'></i></h2>
         {cartItems.length === 0 ? (
-          <p>Your cart is empty</p>
+          <p className='center_title'>No Items</p>
         ) : (
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>

@@ -127,6 +127,16 @@ header {
 .gender-radio label {
   margin-right: 15px; /* Adjust the spacing between radio button and label */
 }
+.cart-count {
+  background-color: #ff5252; /* Choose your preferred background color */
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
 /* Responsive styles - hide menu by default and show when open */
 @media screen and (max-width: 768px) {
   .cart-overlay {

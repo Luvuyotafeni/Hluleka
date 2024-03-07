@@ -7,6 +7,8 @@ const NavBar = () => {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 768);
+  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+  const [cartCount, setCartCount] = useState(cartItems.length);
   const [checkoutFormData, setCheckoutFormData] = useState({
     name: "",
     surname: "",
@@ -29,13 +31,16 @@ const NavBar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
+  useEffect(() => {
+    setCartCount(cartItems.length);
+  }, [cartItems]);
+  
   const handleCartClick = () => {
     setIsCartOpen(!isCartOpen);
     setIsCheckoutOpen(false);
     closeMenu();
   };
-
+  
   const handleCheckoutClick = () => {
     setIsCheckoutOpen(!isCheckoutOpen);
     closeMenu();
@@ -137,7 +142,13 @@ const NavBar = () => {
             <li><a href='#about' onClick={closeMenu}>About</a></li>
             <li><a href='#gallery' onClick={closeMenu}>Gallery</a></li>
             <li><a href='#services' onClick={closeMenu}>Services</a></li>
-            <li><a href="#" onClick={handleCartClick} className='bx bxs-cart'></a></li>
+            {/* Inside the JSX in NavBar component */}
+<li>
+  <a href="#" onClick={handleCartClick} className='bx bxs-cart'>
+    {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+  </a>
+</li>
+
             <li><a href='#contact' onClick={closeMenu}>Contact Us</a></li>
           </ul>
         </div>

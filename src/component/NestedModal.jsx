@@ -8,6 +8,7 @@ import { Button } from '@mui/base/Button';
 export default function NestedModal(props) {
   const [open, setOpen] = React.useState(false);
   const [quantity, setQuantity] = React.useState(1);
+  const [cartCount, setCartCount] = React.useState(getInitialCartCount());
   const handleOpen = () => {
     setOpen(true);
   };
@@ -17,32 +18,63 @@ export default function NestedModal(props) {
 
   const { title, description, price } = props;
  
+  // Function to get the initial cart count from local storage
+  function getInitialCartCount() {
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    return existingCart.length;
+  }
+
+  // Function to update the cart count
+  function updateCartCount() {
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCartCount(existingCart.length);
+  }
   
- 
+  // Use useEffect to update cart count when the cart is modified
+  React.useEffect(() => {
+    updateCartCount();
+  }, []); 
+
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);
     setQuantity(isNaN(newQuantity) ? 1 : newQuantity);
   };
 
-  const handleAddToCart = () => {
-    const cartItem = {
-      title,
-      quantity,
-      price,
-    };
+// ... (your existing code)
 
-    // Get existing cart from local storage or create an empty array
-    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+// ... (your existing code)
 
-    // Add the new item to the cart
-    const updatedCart = [...existingCart, cartItem];
-
-    // Save the updated cart to local storage
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-
-    // Close the modal after adding to cart
-    handleClose();
+const handleAddToCart = () => {
+  const cartItem = {
+    title,
+    quantity,
+    price,
   };
+
+  // Get existing cart from local storage or create an empty array
+  const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Add the new item to the cart
+  const updatedCart = [...existingCart, cartItem];
+
+  // Save the updated cart to local storage
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+
+  // Update the cart count
+  setCartCount(updatedCart.length);
+
+  // Close the modal after adding to cart
+  handleClose();
+
+  // Refresh the entire website
+  window.location.reload();
+};
+
+// ... (rest of your code)
+
+
+// ... (rest of your code)
+
 
   return (
     <div>
