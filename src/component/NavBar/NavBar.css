@@ -10,7 +10,7 @@ header {
   height: 10vh;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   top: 0;
 }
 
@@ -41,11 +41,28 @@ header {
 .navList li {
   margin-left: 40px; 
   font-size: 20px;
+  position: relative;
 }
 
 .navList a {
   text-decoration: none;
   color: #333;
+}
+
+.navList li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.navList li:hover::after {
+  width: 100%;
 }
 
 /* Added styles for overlay and form */
@@ -129,6 +146,7 @@ header {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
   }
   .check_btn {
     margin: 5px 50px 5px 10px;
@@ -146,7 +164,7 @@ header {
     height: 10vh;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
   }
   .navList {
@@ -158,7 +176,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #DFDFDF;
-    z-index: 1;
+    z-index: 1000;
   }
 
   .navList.menu-open {
@@ -215,7 +233,7 @@ header {
     background-color: #DFDFDF;
     height: 10vh;
     position: fixed;
-    width:max-content;
+    width:100%;
     z-index: 1;
     top: 0;
   }
@@ -269,5 +287,24 @@ header {
 
   header{
     width: 100%;
+  }
+}
+@media only screen and (max-width: 320px){
+  header{
+    width:100%;
+  }
+  .container{
+    width: 100%;
+    margin: 0;
+  }
+  .navList {
+    display: none;
+    flex-direction: column;
+    position:fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #DFDFDF;
+    z-index: 1;
   }
 }

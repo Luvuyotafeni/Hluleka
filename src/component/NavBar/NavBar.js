@@ -180,6 +180,14 @@ const NavBar = () => {
                 value={checkoutFormData.surname}
                 onChange={handleFormChange}
               />
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={checkoutFormData.email}
+                onChange={handleFormChange}
+              />
               <label>Gender:</label>
                 <div className="gender-radio">
                   <label htmlFor="male">
@@ -221,7 +229,7 @@ const NavBar = () => {
                 value={checkoutFormData.date}
                 onChange={handleFormChange}
               />
-              <button type="submit" className=''>Submit</button>
+              <button type="submit" className=''>Reserve space</button>
             </form>
           </div>
         </div>
