@@ -33,3 +33,47 @@ a{
   justify-content: space-between;
   align-items: center;
 }
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  background: #e8e8e8;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 100px;
+  overflow: hidden;
+  position: relative;
+  font-size: 17px;
+  transition: all 250ms;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+button:hover {
+  color: #e8e8e8;
+}
+button:hover::before {
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px){
+  button{
+    padding:5px;
+  }
+}

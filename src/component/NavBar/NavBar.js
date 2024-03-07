@@ -15,6 +15,8 @@ const NavBar = () => {
     date: "",
   });
 
+  const [isOrderPlaced, setIsOrderPlaced] = useState(false);  
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobileScreen(window.innerWidth <= 768);
@@ -101,12 +103,16 @@ const NavBar = () => {
 
     // Call collectData function with the required parameters
     await collectData(formDataWithCart);
+    setIsOrderPlaced(true);
+    window.alert("Your message has been sent successfully!");
+    window.location.reload();
   };
 
   const handleCloseOverlay = () => {
     setIsCartOpen(false);
     setIsCheckoutOpen(false);
     closeMenu();
+    setIsOrderPlaced(false);
   };
 
   const handleToggleMenu = () => {
@@ -146,11 +152,17 @@ const NavBar = () => {
           </div>
         </div>
       )}
+      {isOrderPlaced && (
+        <div className="order-placed-message">
+          <p>Your order has been placed successfully!</p>
+        </div>
+      )}
 
       {/* Checkout Form Overlay */}
       {isCheckoutOpen && (
         <div className="cart-overlay" onClick={handleCloseOverlay}>
           <div className="cart-popup" onClick={(e) => e.stopPropagation()}>
+            <p className='center_title'>Enter dtails</p>
             <form onSubmit={handleFormSubmit}>
               <label htmlFor="name">Name:</label>
               <input
@@ -168,14 +180,31 @@ const NavBar = () => {
                 value={checkoutFormData.surname}
                 onChange={handleFormChange}
               />
-              <label htmlFor="gender">Gender:</label>
-              <input
-                type="text"
-                id="gender"
-                name="gender"
-                value={checkoutFormData.gender}
-                onChange={handleFormChange}
-              />
+              <label>Gender:</label>
+                <div className="gender-radio">
+                  <label htmlFor="male">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                      checked={checkoutFormData.gender === "male"}
+                      onChange={handleFormChange}
+                    />
+                    Male
+                  </label>
+                  <label htmlFor="female">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                      checked={checkoutFormData.gender === "female"}
+                      onChange={handleFormChange}
+                    />
+                    Female
+                  </label>
+                </div>
               <label htmlFor="id">ID:</label>
               <input
                 type="text"
@@ -192,7 +221,7 @@ const NavBar = () => {
                 value={checkoutFormData.date}
                 onChange={handleFormChange}
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className=''>Submit</button>
             </form>
           </div>
         </div>

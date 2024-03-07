@@ -46,14 +46,23 @@
 
 .services_container{
     display: flex;
+    flex-basis: 100%;
     flex-wrap: wrap;
     flex-direction:row;
-    height: auto;
-    width: auto;
+    height: fit-content;
+    width: fit-content;
+    
 }
+.delete-btn{
+    width: fit-content;
+}
+
 @media screen and (max-width: 768px) {
     .buttons {
-      margin-left: 0; /* Adjust margins for smaller screens */
+      margin-left: 20px; /* Adjust margins for smaller screens */
+
+      font-size: x-small;
+      width: 120px;
     }
   
     .service {
@@ -69,5 +78,8 @@
     }
     .Images{
         max-width: 300px;
+    }
+    .item{
+        font-size: small;
     }
   }

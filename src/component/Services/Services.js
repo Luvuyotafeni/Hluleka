@@ -39,11 +39,11 @@ const Services = () => {
           <div className='content'>
             {activeSection === 'accommodation' && (
               <div className='accommodation-content'>               
-                <p className='center_title'>This is the Accommodation section.</p>
+                <p className='center_title item'>This is the Accommodation section.</p>
                 <div className='services_container'>
-                <div className='service'>
+                  <div className='service'>
                         <img src={Img16} className='Images center_title'></img>
-                        <p className='center_title'> Dollitle Hotel</p>
+                        <p className='center_title item'> Dollitle Hotel</p>
                         <NestedModal
                           title="Dollitle Hotel"
                           description="Dolittle Cottage is self-catering and can accommodate 16 people. This is your chance to enjoy the WILD in comfort.
@@ -53,7 +53,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={HlulekaNature} className='Images center_title'></img>
-                        <p className='center_title'> Hluleka Nature reserve bnb</p>
+                        <p className='center_title item'> Hluleka Nature reserve bnb</p>
                         <NestedModal
                           title="Hluleka"
                           description="seven self catering chalets with exquisite views, on a small hilltop  covered in old indigenous trees, striking orange 
@@ -63,7 +63,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={Silaka} className='Images center_title'></img>
-                        <p className='center_title'> Silaka Nature Reserve and Chalets</p>
+                        <p className='center_title item'> Silaka Nature Reserve and Chalets</p>
                         <NestedModal
                           title="Silaka Nature Reserve and Chalets"
                           description="A small but beautiful coastal reserve, with 14 chalets can accommodate 4 persons each; 2 chalets accommodate 2 persons each and 2 chalets accommodate 6 persons each."
@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={Mpande} className='Images center_title'></img>
-                        <p className='center_title'> Rogers mpande beach Cottage</p>
+                        <p className='center_title item'> Rogers mpande beach Cottage</p>
                         <NestedModal
                           title="Rogers mpande beach Cottage"
                           description="Rogers Mpande Cottage is perfectly situated for self catering with stunning views and direct access to the beach. 
@@ -85,11 +85,11 @@ const Services = () => {
             )}
             {activeSection === 'activities' && (
               <div className='activities-content'>
-                <p className='center_title'>This is the Activities section.</p>
+                <p className='center_title item'>This is the Activities section.</p>
                 <div className='services_container'>
                     <div className='service'>
                         <img src={Cruise} className='Images center_title'></img>                       
-                        <p className='center_title'> Boat Cruise</p>
+                        <p className='center_title item'> Boat Cruise</p>
                         <NestedModal
                           title="Boat Cruise"
                           description="
@@ -100,7 +100,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={Zoo} className='Images center_title'></img>
-                        <p className='center_title'>Zoo</p>
+                        <p className='center_title item'>Zoo</p>
                         <NestedModal
                           title="Zoo"
                           description="
@@ -111,7 +111,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={Hiking} className='Images center_title'></img>
-                        <p className='center_title'>Hiking</p>
+                        <p className='center_title item'>Hiking</p>
                         <NestedModal
                           title="Hiking"
                           description="Hiking unfolds as a rhythmic ascent through nature's wonders, where the crisp rustle of leaves underfoot and
@@ -121,7 +121,7 @@ const Services = () => {
                     </div>
                     <div className='service'>
                         <img src={Quad} className='Images center_title'></img>
-                        <p className='center_title'>Quad Biking</p>
+                        <p className='center_title item'>Quad Biking</p>
                         <NestedModal
                           title="Quad Biking"
                           description="Quad biking ignites an adrenaline-fueled adventure as the powerful engine roars, kicking up clouds of dust on 

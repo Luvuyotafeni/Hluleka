@@ -1,7 +1,6 @@
 /* Default styles */
 #contact {
   height: 100vh;
-  margin: 10px;
 }
 
 .contact p {
@@ -12,7 +11,7 @@
 }
 
 .contact-container {
-  text-align: center;
+
   width: 99%;
   display: flex;
   justify-content: center;
@@ -27,11 +26,12 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 500px;
 }
 
 label {
   margin-bottom: 5px;
-  margin-left: 40px;
+  margin-left: 0;
   font-size: 20px;
 }
 
@@ -39,18 +39,53 @@ input,
 textarea {
   padding: 8px;
   margin-top: 5px;
-  margin-left: 40px;
-  width: 90%;
+  margin-left: 0;
+  width: 100%;
 }
 
-button {
-  padding: 20px;
-  background-color: #007bff;
-  color: #fff;
+.frm-btn {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  background: #e8e8e8;
   border: none;
   cursor: pointer;
-  border-radius: 10%;
+  width: 200px;
+  margin-left: 100px;
+  overflow: hidden;
+  position: relative;
+
+  font-size: 17px;
+  transition: all 250ms;
 }
+
+.frm-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.frm-btn:hover {
+  color: #e8e8e8;
+}
+
+.frm-btn:hover::before {
+  width: 100%;
+}
+
 
 /* Media query for screens with a maximum width of 768 pixels */
 @media only screen and (max-width: 768px) {
@@ -64,14 +99,38 @@ button {
 
   .contact-container {
       height: auto; /* Adjust height for smaller screens */
+      margin-top: 20px;
   }
 
   .form-row,
   label,
   input,
-  textarea,
-  button {
+  textarea {
       margin-left: 10px; /* Adjust margin and padding for smaller screens */
-      width: 80%; /* Adjust width for smaller screens */
+      width: 90%; /* Adjust width for smaller screens */
+  }
+  label{
+    font-size: small;
+  }
+  .frm-btn {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    background: #e8e8e8;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    font-size: 17px;
+  }
+  form{
+    margin-top: 20px;
   }
 }
+

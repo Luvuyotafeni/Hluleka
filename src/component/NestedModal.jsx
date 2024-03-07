@@ -84,21 +84,7 @@ export default function NestedModal(props) {
   );
 }
 
-function ChildModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
 
-  return (
-    <React.Fragment>
-      <ModalButton onClick={handleOpen}>Add to cart</ModalButton>
-    </React.Fragment>
-  );
-}
 
 const Backdrop = React.forwardRef((props, ref) => {
   const { open, className, ...other } = props;

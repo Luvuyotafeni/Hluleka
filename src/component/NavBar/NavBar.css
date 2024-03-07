@@ -77,6 +77,7 @@ header {
 .cart-overlay form {
   width: 500px; 
   margin: 20px;
+  margin-left: 100px;
 }
 
 .cart-overlay form label {
@@ -94,12 +95,21 @@ header {
 .cart-overlay form button {
   padding: 10px;
   border: none;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 .menu-toggle{
   display: none;
 }
+.gender-radio {
+  margin-left: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
 
+.gender-radio label {
+  margin-right: 15px; /* Adjust the spacing between radio button and label */
+}
 /* Responsive styles - hide menu by default and show when open */
 @media screen and (max-width: 768px) {
   .cart-overlay {
