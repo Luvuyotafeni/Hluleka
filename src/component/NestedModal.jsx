@@ -257,8 +257,8 @@ const TriggerButton = styled(Button)(
   
     &:active {
       letter-spacing: 3px;
-      background-color: hsl(261deg 80% 48%);
-      color: ${theme.palette.mode === 'dark' ? grey[50] : grey[900]};
+      background-color: white;
+      color: black;
       box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
       transform: translateY(10px);
       transition: 100ms;
