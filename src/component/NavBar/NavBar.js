@@ -44,6 +44,7 @@ const NavBar = () => {
   const handleCheckoutClick = () => {
     setIsCheckoutOpen(!isCheckoutOpen);
     closeMenu();
+    
   };
 
   const handleFormChange = (e) => {
@@ -73,6 +74,18 @@ const NavBar = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
+    if (
+      !checkoutFormData.name ||
+      !checkoutFormData.surname ||
+      !checkoutFormData.gender ||
+      !checkoutFormData.id ||
+      !checkoutFormData.date
+    ) {
+      // Show an alert message if form validation fails
+      alert('Please fill out all the required fields.');
+      return;
+    }
 
     // Get the cart items from localStorage
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -143,12 +156,11 @@ const NavBar = () => {
             <li><a href='#gallery' onClick={closeMenu}>Gallery</a></li>
             <li><a href='#services' onClick={closeMenu}>Services</a></li>
             {/* Inside the JSX in NavBar component */}
-<li>
-  <a href="#" onClick={handleCartClick} className='bx bxs-cart'>
-    {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-  </a>
-</li>
-
+            <li>
+              <a href="#" onClick={handleCartClick} className='bx bxs-cart'>
+                {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+              </a>
+            </li>
             <li><a href='#contact' onClick={closeMenu}>Contact Us</a></li>
           </ul>
         </div>
